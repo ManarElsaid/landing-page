@@ -58,9 +58,9 @@ function makeActive(){
         const box = section.getBoundingClientRect();
         if (box.top <= 150 && box.bottom >= 150) {
 
-        section.classList.add("your-active-class");
+        section.classList.add("active");
         } else {
-        section.classList.remove("your-active-class");
+        section.classList.remove("active");
         }
      }
 }
