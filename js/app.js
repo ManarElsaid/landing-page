@@ -58,9 +58,9 @@ function makeActive(){
         const box = section.getBoundingClientRect();
         if (box.top <= 150 && box.bottom >= 150) {
 
-        section.classList.add("active");
+        section.classList.add("your-active-class");
         } else {
-        section.classList.remove("active");
+        section.classList.remove("your-active-class");
         }
      }
 }
@@ -85,7 +85,6 @@ document.addEventListener("DOMContentLoaded", () => {navList.appendChild(navBar)
 // Scroll to section on link click
 navList.addEventListener("click", (event) => {
     event.preventDefault();
-    console.log(event.target);
 
     if (event.target.nodeName == "A") {
         targetId = event.target.getAttribute("href");
