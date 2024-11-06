@@ -55,13 +55,18 @@ for (const section of sections) {
 
 // Add class 'active' to section when near top of viewport
 function makeActive(){
-    for (const section of sections) {
-        const box = section.getBoundingClientRect();
+    for (let i = 0; i < sections.length; i++) {
+        const navItems = document.querySelectorAll(".menu__link");
+        const box = sections[i].getBoundingClientRect();
         if (box.top <= 150 && box.bottom >= 150) {
 
-        section.classList.add("active");
+        sections[i].classList.add("active");
+        // adding class to hightlight the active section name in the nav bar
+        navItems[i].classList.add("nav_item_active");
+
         } else {
-        section.classList.remove("active");
+        sections[i].classList.remove("active");
+        navItems[i].classList.remove("nav_item_active");
         }
      }
 }
