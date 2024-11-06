@@ -44,11 +44,12 @@ const navList = document.querySelector("#navbar__list");
 const navBar = document.createDocumentFragment();
 for (const section of sections) {
     const secName = document.createElement("li");
-    const link = document.createElement("a");
-    link.setAttribute("href", `#${section.id}`);
-    link.textContent =  section.dataset.nav;
-    link.classList.add("menu__link");
-    secName.appendChild(link);
+    // const link = document.createElement("a");
+    // link.setAttribute("href", `#${section.id}`);
+    // link.textContent =  section.dataset.nav;
+    // link.classList.add("menu__link");
+    secName.innerHTML = `<a href=#${section.id} class="menu__link">${section.dataset.nav}</a>`;
+    // secName.appendChild(link);
     navBar.appendChild(secName);
 }
 
